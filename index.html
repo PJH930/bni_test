@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 메인 이미지 및 텍스트 섹션 -->
+<section class="conA">
+    <div class="site-navbar-wrap">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <a href="#" target="_blank" class="p-2 pl-0 text-white">Facebook</a>
+                <a href="#" target="_blank" class="p-2 pl-0 text-white">Instagram</a>
+                <a href="#" target="_blank" class="p-2 pl-0 text-white">YouTube</a>
+                <a href="#" target="_blank" class="p-2 pl-0 text-white">Location</a>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="mailto:osoosealove@naver.com" class="d-flex align-items-center ml-auto mr-4 text-white">
+                    <span class="icon-envelope mr-2">상민메일@naver.com</span>
+                </a>
+                <a href="tel:010-4488-2128" class="d-flex align-items-center text-white">
+                    <span class="icon-phone mr-2">010-상민-전화</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="my-0 site-logo">
+            <img src="images/logo.png" width="120" alt="Logo">
+            <button class="play-button" id="play-button" onclick="openVideo()">
+                ▶
+            </button>
+        </h1>
+        <p>BNI는 체계적이고 긍적적이며 전문적인 리퍼럴 프로그램을 통해 기업 경영자ㆍ전문가들이 비즈니스 소개를 주고 받으며 자신의 사업을 키우는 것을 지원하는 목적으로 운영되는 39년의 검증된 세계 최대 협업비즈니스 플랫폼입니다.</p>
+    </div>
+
+    <!-- 비디오 팝업 -->
+    <div class="video-popup" id="video-popup">
+        <div class="video-container">
+            <span class="close" onclick="closeVideo()">&times;</span>
+            <iframe id="video-frame" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 상단 네비게이션 바 -->
+<div class="site-navbar site-navbar-target js-sticky-header">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="col-2">
+                <h1 class="my-0 site-logo">
+                    <a href="index.html"><img src="images/logo.png" width="120" alt="Logo"></a>
+                </h1>
+            </div>
+            <div class="col-10 text-right">
+                <nav class="site-navigation" role="navigation">
+                    <ul class="site-menu main-menu js-clone-nav">
+                        <li><a href="#about-section" class="nav-link">About Us</a></li>
+                        <li><a href="#our-team-section" class="nav-link">Member</a></li>
+                        <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+                        <li><a href="#projects-section" class="nav-link">Gallery</a></li>
+                        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                        <li>
+                            <div class="sub_btn subbtn-red">
+                                <a href="#contact-section">참석문의 &gt;</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- about 섹션 -->
+<section id="about-section">
+    <div class="about-p-red">
+        <p>BNI ~~을 소개합니다.</p>
+    </div>
+    <h2>About Us</h2>
+    <div class="about-p">
+        <p>BNI는 기업 경영자ㆍ전문가들이 비즈니스 소개를 주고 받으며 자신의 사업을 키우는 것을</p>
+        <p>지원하는 목적으로 운영되는 37년의 세계 최대의 협업비즈니스 플랫폼입니다.</p>
+    </div>
+
+    <div class="about-content">
+        <div class="video-container">
+            <video src="video.mp4" controls></video>
+        </div>
+        <div class="content">
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>전세계 11,000개 이상의 챕터와 32만명 이상의 멤버가 76개국에서 활동</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>한국은 2024년 10월 현재 70여개의 챕터에서 400여개의 전문분야를 대표하는 2,300여명의 멤버가 활발히 활동하고 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>지속적인 사업소개를 통한 신규고객 소개로 비즈니스를 키울 수 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>사업에 필요한 리더십, 프리젠테이션, 커뮤니케이션 기술을 배울 수 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>강력한 사업가 인맥이 형성되고 다양한 협업기회를 찾을 수 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>국내를 넘어 해외 수입ㆍ수출의 기회를 가질 수 있습니다</p>
+            </div>
+
+
+            <button><a href="#contact-section" class="nav-link">참석 신청 </a></button>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- member 섹션 -->
+    <section id="our-team-section">
+        <div class="member-p-red">
+            <p>BNI ~~ ~~~ 챕터의 멤버들을 만나보세요.</p>
+        </div>
+        <h2>Our Member</h2>
+        <div class="member-p">
+            <p>각 분야를 대표하는 멤버들을 소개합니다.</p>
+        </div>
+        <div class="member-card">
+            <img src="images/member1.jpg.png" alt="Member 1">
+            <div class="info">
+                <p>이름: 홍길동</p>
+                <p>회사명: ABC Corp</p>
+                <p>전화번호: 010-1234-5678</p>
+                <p>이메일: email@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq 섹션 -->
+    <section id="faq-section">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <img src="question.jpg" alt="Question">
+            <div class="question">
+                <h3>질문 1</h3>
+                <p class="answer">여기에 답변 내용을 입력합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery 섹션 -->
+    <section id="projects-section">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="gallery1.jpg" alt="Gallery Image 1">
+            <img src="gallery2.jpg" alt="Gallery Image 2">
+        </div>
+    </section>
+
+    <!-- 참석 메일보내기 섹션 -->
+    <section id="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="이름" required>
+            <input type="email" name="email" placeholder="이메일" required>
+            <input type="tel" name="phone" placeholder="핸드폰 번호" required>
+            <textarea name="memo" placeholder="메모"></textarea>
+            <button type="submit">참석 신청</button>
+        </form>
+    </section>
+
+    <!-- 페이지 하단 -->
+    <footer>
+        <p>Email: 상민메일@example.com</p>
+        <p>Phone: 010-상민-번호</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        window.onscroll = function() {
+          var navbar = document.querySelector('.site-navbar');
+          if (window.pageYOffset > 100) {  // 스크롤이 100px 이상 내려가면
+            navbar.classList.add('scrolled');  // 'scrolled' 클래스 추가
+          } else {
+            navbar.classList.remove('scrolled');  // 'scrolled' 클래스 제거
+          }
+        };
+    </script>
+</body>
+</html>
