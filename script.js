@@ -43,3 +43,20 @@ window.addEventListener('scroll', function() {
 });
 
 
+function openVideo() {
+    const videoPopup = document.getElementById('video-popup');
+    const videoFrame = document.getElementById('video-frame');
+    
+    // 유튜브 동영상 URL 설정 (예: 'https://www.youtube.com/embed/VIDEO_ID')
+    videoFrame.src = 'https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1'; // 자동 재생
+    videoPopup.classList.add('show'); // 팝업 표시
+}
+
+function closeVideo() {
+    const videoPopup = document.getElementById('video-popup');
+    const videoFrame = document.getElementById('video-frame');
+    
+    videoFrame.src = ''; // 비디오 정지
+    videoPopup.classList.remove('show'); // 팝업 숨김
+}
+
