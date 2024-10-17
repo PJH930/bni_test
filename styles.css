@@ -12,6 +12,12 @@ body {
     color: #333;
 }
 
+
+
+
+
+
+
 /* main */
 
 .conA {
@@ -102,23 +108,41 @@ body {
 
 .play-button {
     position: absolute; /* 절대 위치로 설정 */
-    top: 50px; /* 로고 위쪽으로 이동 */
+    top: 30%; /* 로고 위쪽으로 이동 (조정 필요) */
     left: 50%; /* 중앙 정렬 */
-    transform: translateX(-50%); /* 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
     background-color: rgba(255, 255, 255, 0.8); /* 배경색 */
     border: none; /* 테두리 제거 */
     border-radius: 50%; /* 동그란 버튼 */
-    width: 50px; /* 버튼 크기 */
-    height: 50px; /* 버튼 크기 */
-    font-size: 24px; /* 버튼 글씨 크기 */
+    width: 60px; /* 버튼 크기 */
+    height: 60px; /* 버튼 크기 */
     cursor: pointer; /* 커서 변경 */
+    display: flex; /* 중앙 정렬을 위해 flex 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+    transform-origin: center; /* 크기 증가 기준을 중앙으로 설정 */
 }
+
+.play-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* 마우스 오버 시 배경색 변화 */
+    transform: translate(-50%, -50%) scale(1.2); /* 마우스 오버 시 크기 증가 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+}
+
+
 
 iframe {
     width: 100%; /* iframe 너비 100% */
     height: 100%; /* iframe 높이 100% */
     border: none; /* 테두리 제거 */
 }
+
+
+
+
+
+
 
 
 /* 상단 소셜 미디어 및 연락처 바 스타일 */
@@ -145,6 +169,14 @@ iframe {
 .container.py-3 {
     padding-top: 60px; /* 패딩을 추가하여 내용이 바 아래로 밀리도록 설정 */
 }
+
+
+
+
+
+
+
+
 
 /* 나머지 스타일 */
 .d-flex {
@@ -177,6 +209,13 @@ iframe {
 }
 
 
+
+
+
+
+
+
+
 /* 기본 네비게이션 스타일 */
 .site-navbar {
     position: fixed; /* 스크롤 시 고정 위치 */
@@ -198,8 +237,6 @@ iframe {
     z-index: 999; /* 네비게이션 바보다 아래에 위치 */
 }
 
-
-
 .site-menu {
     list-style: none; /* 리스트 스타일 제거 */
     padding: 0; /* 패딩 제거 */
@@ -220,6 +257,15 @@ iframe {
     padding: 10px; /* 링크 주변에 패딩 추가 */
     line-height: 1.5; /* 줄 높이 설정 */
 }
+
+
+
+
+
+
+
+
+
 
 /* 메뉴 항목 스타일 */
 .site-navbar .site-menu a {
@@ -257,14 +303,14 @@ iframe {
 }
 
 .site-navbar .site-menu  a:hover {
-    color: #f39c12;
+    color: #ffd000;
 }
 
 .site-navbar .sub_btn {
     display: inline-block; /* 인라인 블록으로 설정 */
     background-color: #ff0000;
     padding: 10px 15px;
-    border-radius: 20px;
+    border-radius: 5px;
     box-shadow: 1px 1px 3px 1px black;
     white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     transition: background-color 0.3s;
@@ -283,7 +329,7 @@ iframe {
 .sub_btn {
     display: inline-block; /* 인라인 블록으로 설정 */
     padding: 12px 24px; /* 패딩 설정 */
-    background-color: #b22222; /* 초기 배경색 */
+    background-color: #4e1f1f; /* 초기 배경색 */
     color: white; /* 글자 색상 */
     text-decoration: none; /* 밑줄 제거 */
     border-radius: 25px; /* 둥근 모서리 */
@@ -318,6 +364,14 @@ iframe {
     }
 }
 
+
+
+
+
+
+
+
+
 /* 각 섹션 스타일 */
 section {
     padding: 100px 20px;
@@ -335,9 +389,17 @@ h2 {
     font-weight: 700;
 }
 
+
+
+
+
+
+
+
+
 /* about 섹션 스타일 */
 #about-section {
-    background-color: #ecf0f1;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column; /* 세로 방향 정렬 */
     align-items: center; /* 중앙 정렬 */
@@ -409,15 +471,27 @@ h2 {
     background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.3rem;
     transition: background-color 0.3s;
+}
+
+.nav-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 글자 색상을 상속받음 */
 }
 
 .content button:hover {
     background-color: #2980b9;
 }
+
+
+
+
+
+
+
 
 
 
@@ -438,52 +512,211 @@ h2 {
     text-align: center; /* 텍스트 중앙 정렬 */
 }
 
+.member-card-container {
+    display: flex;
+    flex-wrap: wrap; /* 여러 줄로 나눠서 배치 */
+    justify-content: center; /* 중앙 정렬 */
+}
+
+.member-wrapper {
+    width: 20%; /* 각 멤버 카드의 너비 */
+    margin: 10px; /* 카드 간격 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    opacity: 0; /* 기본 상태에서 투명하게 */
+    transition: opacity 0.5s ease; /* 부드러운 전환 효과 */
+    display: none; /* 기본적으로 숨김 */
+}
+
+.member-wrapper.show {
+    opacity: 1; /* 보이게 설정 */
+    display: block; /* 보이게 설정 */
+}
+
+
 
 .member-card {
-    display: inline-block;
-    width: 220px;
-    margin: 20px;
+    width: 100%; /* 카드 너비를 100%로 설정 */
+    height: 300px; /* 카드 높이 조정 */
     position: relative;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    transition: transform 0.3s ease; /* 카드 확대 효과 추가 */
 }
 
 .member-card img {
     width: 100%;
     height: auto;
-    border-bottom: 3px solid #3498db;
+    transition: transform 0.3s ease; /* 이미지 확대 효과 추가 */
+}
+
+.member-card:hover img {
+    transform: scale(1.06); /* 마우스를 올리면 이미지 확대 */
 }
 
 .info {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
+    height: 150px; /* 카드 높이 조정 */
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     width: 100%;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%); /* 기본 상태에서 아래쪽으로 위치 */
+    transition: transform 0.3s ease-in-out; /* 올라오는 애니메이션 */
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .member-card:hover .info {
-    transform: translateY(0);
+    transform: translateY(10%); /* 마우스를 올리면 info 올라오기 */
 }
 
 .info p {
     margin: 5px 0;
 }
 
+.member-description {
+    margin-top: 10px; /* 카드와 설명 사이의 간격 */
+    text-align: center; /* 설명 중앙 정렬 */
+}
+
+.member-description h3 {
+    margin: 10px 0 5px; /* 제목과 설명 간격 조정 */
+}
+
+.member-description p {
+    margin: 0; /* 설명 텍스트 마진 초기화 */
+}
+
+.button-container {
+    margin-bottom: 20px; /* 버튼과 카드 사이의 간격 */
+}
+
+.button-container button {
+    margin: 0 70px; /* 버튼 간격 */
+    padding: 10px 20px; /* 버튼 패딩 */
+    font-size: 1.2rem; /* 글자 크기 */
+    cursor: pointer; /* 커서 변경 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    background-color: #757575; /* 기본 버튼 색상 */
+    color: white; /* 글자 색상 */
+    position: relative; /* 애니메이션 효과를 위해 position 설정 */
+    overflow: hidden; /* 자식 요소가 버튼 밖으로 나가지 않도록 설정 */
+    transition: transform 0.7s ease; /* 애니메이션 추가 */
+
+}
+
+.button-container button.active {
+    animation: waveAnimation 0.8s infinite; /* 파도 애니메이션 */
+    transform: scale(1.3); /* 활성화 시 크기 증가 */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 5); /* 신비로운 그림자 효과 */
+}
+
+@keyframes waveAnimation {
+    0% {
+        background-color: #0056b3; /* 시작 색상 */
+        background-image: linear-gradient(45deg, #0056b3, #007BFF);
+        background-size: 200% 200%; /* 배경 크기 설정 */
+        background-position: 0% 50%; /* 초기 배경 위치 */
+    }
+    10% {
+        background-position: 10% 50%;
+    }
+    20% {
+        background-position: 20% 50%;
+    }
+    30% {
+        background-position: 30% 50%;
+    }
+    40% {
+        background-position: 40% 50%;
+    }
+    50% {
+        background-color: #007BFF; /* 중간 색상 */
+        background-image: linear-gradient(45deg, #007BFF, #0056b3);
+        background-position: 50% 50%;
+    }
+    60% {
+        background-position: 60% 50%;
+    }
+    70% {
+        background-position: 70% 50%;
+    }
+    80% {
+        background-position: 80% 50%;
+    }
+    90% {
+        background-position: 90% 50%;
+    }
+    100% {
+        background-color: #0056b3; /* 끝 색상 */
+        background-image: linear-gradient(45deg, #0056b3, #007BFF);
+        background-position: 100% 50%;
+    }
+}
+
+.button-container button:hover {
+    background-color: #0056b3; /* 마우스 오버 시 색상 변화 */
+}
+
+
+
+
+
+
+
+
+/* 구성인원 섹션 스타일 */
+#group-section {
+    background-color: #f1f1f1;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.group-p-red {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
 /* faq 섹션 스타일 */
 #faq-section {
     background-color: #fff;
+    display: flex;
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 20px; /* 패딩 추가 */
+    height: 100vh; /* 전체 뷰포트 높이 사용 */
+}
+
+#faq-section .faq-p-red {
+    padding-bottom: 10px;
+    color: red;
+}
+
+.faq-p {
+    padding-bottom: 50px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.faq-container {
+    display: flex; /* flexbox 사용 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+    max-width: 1300px; /* 최대 너비 설정 (선택 사항) */
 }
 
 .faq-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* 질문과 이미지를 가로로 배치 */
+    align-items: flex-start; /* 상단 정렬 */
     margin-bottom: 20px;
     background-color: #f8f9fa;
     padding: 20px;
@@ -492,48 +725,176 @@ h2 {
 }
 
 .faq-item img {
-    max-width: 150px;
+    max-width: 450px; /* 이미지 크기 */
     border-radius: 10px;
+    margin-right: 20px; /* 이미지와 질문 사이의 간격을 증가 */
 }
 
-.question h3 {
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #2980b9;
+.question-answer {
+    display: flex;
+    flex-direction: column; /* 질문과 답변 세로 정렬 */
+}
+
+.question {
+    cursor: pointer; /* 질문에 마우스 커서 변경 */
 }
 
 .answer {
-    display: none;
+    display: none; /* 기본적으로 답변 숨김 */
     font-size: 1rem;
     color: #7f8c8d;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out; /* 부드러운 전환 효과 */
+    max-height: 0; /* 초기 높이 설정 */
+    overflow: hidden; /* 넘치는 내용 숨김 */
 }
 
-.question h3:hover {
-    color: #3498db;
+.answer.show {
+    display: block; /* 답변 보이게 설정 */
+    max-height: 200px; /* 최대 높이 설정 (필요에 따라 조정) */
+    opacity: 1; /* 불투명하게 설정 */
 }
 
-/* gallery 섹션 스타일 */
+.answer.hide {
+    opacity: 0; /* 투명하게 설정 */
+}
+
+
+
+
+
+
+
+
+
+
+/* gallery 섹션 */
 #projects-section {
-    background-color: #ecf0f1;
-    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 20px; /* 패딩 추가 */
+    height: 100vh; /* 전체 뷰포트 높이 사용 */
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* 이미지들을 중앙에 정렬 */
+    gap: 10px;
+    margin-top: 20px;
 }
 
+#projects-section .gallery-p-red {
+    padding-bottom: 10px;
+    color: red;
+}
+
+.gallery-p {
+    padding-bottom: 50px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 각 이미지 스타일 */
 .gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    width: calc(20% - 10px);  /* 한 줄에 5개의 이미지 */
+    height: 300px;            /* 모든 이미지의 고정 높이 */
+    object-fit: cover;        /* 이미지가 왜곡되지 않도록 함 */
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+    /* 이미지에 그림자 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* 마우스 올릴 때 애니메이션 */
 }
 
+/* 마우스를 올렸을 때 이미지 확대 효과 */
 .gallery-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);  /* 이미지가 살짝 확대됨 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 확대 시 그림자 강화 */
 }
+
+/* 팝업 컨테이너 */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* 팝업 내부 넘침 방지 */
+}
+
+/* 팝업 내용(확대 효과 포함) */
+.popup-content {
+    max-width: 90%;
+    max-height: 80%;
+    opacity: 0;
+    transform: scale(0.5);  /* 작게 시작 */
+    transition: opacity 0.5s ease, transform 0.5s ease;  /* 확대 애니메이션 */
+    position: relative;
+    z-index: 1;
+}
+
+/* 팝업 활성화 시 확대 효과 */
+.popup-content.active {
+    opacity: 1;
+    transform: scale(1);  /* 확대 */
+}
+
+/* 닫기 버튼 */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 좌우 화살표 */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    user-select: none;
+    z-index: 2;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* 이미지 전환 시 슬라이딩 효과 */
+.popup-content.slide-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.popup-content.slide-right {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+
+
+
+
+
 
 /* 참석 메일보내기 섹션 스타일 */
 #contact-section {
@@ -542,6 +903,18 @@ h2 {
     padding: 80px 20px;
 }
 
+
+#contact-section .contact-p-red {
+    padding-bottom: 10px;
+    color: red;
+}
+
+.contact-p {
+    padding-bottom: 50px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -549,8 +922,8 @@ h2 {
 }
 
 #contact-form input, #contact-form textarea {
-    width: 80%;
-    max-width: 500px;
+    width: 70%;
+    max-width: 1000px;
     padding: 15px;
     margin: 10px 0;
     border-radius: 5px;
@@ -558,18 +931,19 @@ h2 {
 }
 
 #contact-form button {
+    width: 70%;
     padding: 12px 30px;
-    background-color: #e74c3c;
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.3rem;
     transition: background-color 0.3s;
 }
 
 #contact-form button:hover {
-    background-color: #c0392b;
+    background-color: #2980b9;
 }
 
 /* 하단 푸터 */
