@@ -23,10 +23,14 @@ window.addEventListener('load', function() {
 });
 
 // 확대/축소 방지 이벤트 리스너
-document.addEventListener('gesturestart', function (e) {
-    e.preventDefault(); // 확대/축소 방지
-});
+function preventZoom(e) {
+    if (document.body.classList.contains('loading')) {
+        e.preventDefault(); // 확대/축소 방지
+    }
+}
 
+// 로딩 중일 때 확대/축소 방지
+document.addEventListener('gesturestart', preventZoom);
 
 
 // 부드러운 스크롤
