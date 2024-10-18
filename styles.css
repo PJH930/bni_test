@@ -360,6 +360,7 @@ iframe {
 }
 
 .sub_btn a {
+    padding: 15px;
     color: white;
     text-decoration: none;
     font-weight: bold;
