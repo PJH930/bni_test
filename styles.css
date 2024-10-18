@@ -45,7 +45,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    touch-action: pan-x; /* 수평 스크롤만 허용 */
+    touch-action: pan-y; /* 수평 스크롤만 허용 */
 }
 
 
