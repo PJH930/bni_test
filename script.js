@@ -234,37 +234,38 @@ document.addEventListener('DOMContentLoaded', function() {
     questions.forEach(function(question) {
         // 각 질문에 클릭 이벤트 리스너를 추가
         question.addEventListener('click', function() {
-            const openAnswer = document.querySelector('.answer.show'); // 현재 열려 있는 답변을 선택
             const answer = this.nextElementSibling; // 클릭한 질문 다음에 있는 답변 요소 선택
             const icon = this.querySelector('.icon'); // 클릭한 질문의 아이콘 선택
 
-            // 클릭된 질문의 텍스트 색상을 빨간색으로 변경
+            // 클릭한 질문의 색상 및 아이콘 상태 확인
+            const isOpen = answer.classList.contains('show');
+
+            // 모든 질문의 색상과 아이콘 초기화
             questions.forEach(q => {
                 q.style.color = 'black'; // 모든 질문의 색상을 기본으로 되돌림
                 const qIcon = q.querySelector('.icon'); // 각 질문의 아이콘 선택
                 qIcon.src = 'images/FAQ/plus.png'; // 모든 아이콘을 "+"로 설정
                 qIcon.classList.remove('rotate'); // 모든 아이콘 회전 제거
+                const qAnswer = q.nextElementSibling; // 각 질문의 답변 요소
+                closeAnswer(qAnswer); // 모든 답변 닫기
             });
-            this.style.color = 'red'; // 클릭된 질문의 색상을 빨간색으로 변경
 
-            // 클릭한 아이콘 회전 애니메이션 추가
-            icon.classList.add('rotate');
-
-            // 다른 질문의 답변이 열려 있고, 클릭한 질문의 답변이 아닐 경우 닫기
-            if (openAnswer && openAnswer !== answer) {
-                closeAnswer(openAnswer);
-            }
-
-            // 클릭한 질문의 답변이 이미 열려 있다면 닫기
-            if (answer.classList.contains('show')) {
-                closeAnswer(answer);
-            } else {
-                // 클릭한 질문의 답변이 열려 있지 않다면 열기
+            // 클릭한 질문이 열려 있지 않다면
+            if (!isOpen) {
+                // 클릭한 질문의 색상을 빨간색으로 변경
+                this.style.color = 'red'; // 클릭된 질문의 색상을 빨간색으로 변경
+                // 클릭한 아이콘 회전 애니메이션 추가
+                icon.classList.add('rotate');
+                icon.src = 'images/FAQ/minus.png'; // 아이콘을 "-"로 변경
+                // 클릭한 질문의 답변 열기
                 openAnswerElement(answer);
+            } else {
+                // 이미 열려 있다면 닫기
+                this.style.color = 'black'; // 원래 색상으로 복구
+                icon.src = 'images/FAQ/plus.png'; // 아이콘을 "+"로 설정
+                icon.classList.remove('rotate'); // 아이콘 회전 제거
+                closeAnswer(answer);
             }
-
-            // 아이콘 토글
-            icon.src = icon.src.includes('plus.png') ? 'images/FAQ/minus.png' : 'images/FAQ/plus.png'; // 아이콘 토글
         });
     });
 
@@ -280,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
         answer.classList.remove('show'); // "show" 클래스를 제거하여 답변을 숨김
     }
 });
+
 
 
 
