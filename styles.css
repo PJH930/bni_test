@@ -86,7 +86,7 @@ body {
     height: 450px;
     box-shadow: 10px 10px 20px black;
     text-shadow: 3px 3px 20px rgba(59, 59, 59, 0.8);
-    background-color: rgba(206, 206, 206, 0.247);
+    background-color: rgba(0, 0, 0, 0.493);
     text-align: center;
     justify-content: center;
     animation: Line 2s infinite;
