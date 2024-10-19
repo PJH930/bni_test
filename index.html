@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>대구 BNI</title>
+    <meta name="description" content="이상민 디렉터">
+
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="대구 BNI" />
+    <meta property="og:description" content="대구BNI 이상민 그로스디렉터 운영챕터의 멤버들을 만나보세요" />
+    <meta property="og:image" content="images/logo.png" /> <!-- 썸네일 이미지 -->
+    <meta property="og:url" content="" />
+
+    <!-- 페이지의 문자 인코딩을 UTF-8로 설정 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <!-- 페이지 제목 설정 (검색 결과에 나타날 수 있음) -->
+    <meta name="title" content="대구 BNI " />
+    
+    <!-- 페이지 설명 설정 (검색 결과에서 페이지 내용을 설명함) -->
+    <meta name="description" content="대구BNI 이상민 그로스디렉터 운영챕터의 멤버들을 만나보세요" />
+    
+    <!-- 페이지 관련 키워드 설정 (현재는 중요성이 줄어듦) -->
+    <meta name="keywords" content="대구BNI 이상민 그로스디렉터 운영챕터의 멤버들을 만나보세요" />
+    
+    <!-- Open Graph 프로토콜을 사용하여 페이지 유형 정의 (비어있음) -->
+    <meta property="og:type" content="">
+    
+    <!-- Open Graph 제목 설정 (소셜 미디어에서 공유될 때 나타날 제목) -->
+    <meta property="og:title" content="대구 BNI">
+    
+    <!-- Open Graph 설명 설정 (소셜 미디어에서 공유될 때 나타날 설명) -->
+    <meta property="og:description" content="대구BNI 이상민 그로스디렉터 운영챕터의 멤버들을 만나보세요">
+    
+    <!-- Open Graph 이미지 설정 (소셜 미디어에서 공유될 때 나타날 이미지) -->
+    <meta property="og:image" content="images/logo.png">
+    
+    <!-- Open Graph URL 설정 (페이지가 공유될 때 사용될 URL, 비어있음) -->
+    <meta property="og:url" content="">
+    
+    <!-- 반응형 웹 디자인을 위한 메타 태그 (모바일 기기에서 페이지 너비 설정) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3777ee8c9b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- 로딩 스피너 -->
+<div id="loading-spinner" class="loading-spinner">
+    <div class="spinner"></div>
+</div>
+
+
+<!--mp3 재생 알고리즘
+<audio id="background-music" src="mp3/number03.mp3" loop muted></audio>
+<div id="music-control" class="no-select">
+    <span id="play-pause-icon" class="play">▶</span>
+    <span id="play-pause-icon" class="pause">❚❚</span>
+</div> 
+-->
+
+
+<!-- 메인 이미지 및 텍스트 섹션 -->
+<section class="conA no-select">
+    <div class="site-navbar-wrap">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <a href="#" target="_blank" class="p-2 pl-0 text-white"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/car_dami/" target="_blank" class="p-2 pl-0 text-white"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" class="p-2 pl-0 text-white"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://map.naver.com/p/entry/place/1098966907?placePath=%2Fhome&c=15.61,0,0,0,dh" target="_blank" class="p-2 pl-0 text-white">
+                    <i class="fa-solid fa-location-dot"></i></a> <!-- 네이버 지도 링크 추가 -->
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="mailto:dltkdals0729@naver.com" class="d-flex align-items-center ml-auto mr-4 text-white no-underline">
+                    <i class="fa-solid fa-envelope mr-2"></i><span class="email-text">dltkdals0729@naver.com</span>
+                </a>
+                <a href="tel:010-8490-8979" class="d-flex align-items-center text-white no-underline">
+                    <i class="fa-solid fa-phone mr-2"></i><span class="phone-text">010-8490-8979</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="my-0 site-logo">
+            <img src="images/logo.png" width="120" alt="Logo">
+            <button class="play-button" id="play-button" onclick="openVideo()">
+                <img src="images/play-icon.png" alt="Play" width="60" height="60"> <!-- 이미지로 버튼 텍스트 대체 -->
+            </button>
+        </h1>
+        <p>BNI는 체계적이고 긍적적이며 전문적인 리퍼럴 프로그램을 통해 기업 경영자ㆍ전문가들이 비즈니스 소개를 주고 받으며 자신의 사업을 키우는 것을 지원하는 목적으로 운영되는 39년의 검증된 세계 최대 협업비즈니스 플랫폼입니다.</p>
+    </div>
+
+    <!-- 비디오 팝업 -->
+    <div class="video-popup" id="video-popup">
+        <div class="video-container">
+            <span class="close" onclick="closeVideo()">&times;</span>
+            <iframe id="video-frame" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- 상단 네비게이션 바 -->
+<div class="site-navbar site-navbar-target js-sticky-header no-select">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="col-2">
+                <h1 class="my-0 site-logo">
+                    <a href="index.html"><img src="images/logo.png" width="120" alt="Logo"></a>
+                </h1>
+            </div>
+            <div class="col-10 text-right">
+                <nav class="site-navigation" role="navigation">
+                    <ul class="site-menu main-menu js-clone-nav">
+                        <li class="menu-item"><a href="#about-section" class="nav-link">About Us</a></li>
+                        <li class="menu-item"><a href="#our-team-section" class="nav-link">Member</a></li>
+                        <li class="menu-item"><a href="#faq-section" class="nav-link">FAQ</a></li>
+                        <li class="menu-item"><a href="#projects-section" class="nav-link">Gallery</a></li>
+                        <li class="menu-item"><a href="#contact-section" class="nav-link">Contact</a></li>
+                        <li>
+                            <div class="sub_btn subbtn-red">
+                                <a href="#contact-section">참석문의</a>
+                            </div>
+                        </li>
+                        <!-- 아이콘 추가 -->
+                        <div class="menu-icon">
+                            <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 슬라이딩 팝업 메뉴 -->
+<div class="sliding-menu no-select">
+    <button class="close-btn">X</button> <!-- 팝업 닫기 버튼 -->
+    <ul>
+        <li><a href="#about-section">About Us</a></li>
+        <li><a href="#our-team-section">Member</a></li>
+        <li><a href="#faq-section">FAQ</a></li>
+        <li><a href="#projects-section">Gallery</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- about 섹션 -->
+<section id="about-section"  class="no-select">
+    <div class="about-p-red">
+        <p>BNI를 소개합니다.</p>
+    </div>
+    <h2 style="text-transform: none;">About Us</h2>
+    <div class="about-p">
+        <p>BNI는 기업 경영자ㆍ전문가들이 비즈니스 소개를 주고 받으며 자신의 사업을 키우는 것을</p>
+        <p>지원하는 목적으로 운영되는 39년의 세계 최대의 협업비즈니스 플랫폼입니다.</p>
+    </div>
+
+    <div class="about-content">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MeXoX7AEocU?autoplay=1&mute=1" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="content">
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>전세계 11,000개 이상의 챕터와 32만명 이상의 멤버가 76개국에서 활동</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>한국은 2024년 10월 현재 70여개의 챕터에서 400여개의 전문분야를 대표하는 2,300여명의 멤버가 활발히 활동하고 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>지속적인 사업소개를 통한 신규고객 소개로 비즈니스를 키울 수 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>사업에 필요한 리더십, 프리젠테이션, 커뮤니케이션 기술을 배울 수 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>강력한 사업가 인맥이 형성되고 다양한 협업기회를 찾을 수 있습니다</p>
+            </div>
+            <div class="checklist">
+                <span class="check-icon">✔️</span>
+                <p>국내를 넘어 해외 수입ㆍ수출의 기회를 가질 수 있습니다</p>
+            </div>
+
+
+            <button><a href="#contact-section" class="nav-link">참석 신청</a></button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- member 섹션 -->
+<section id="our-team-section"  class="no-select">
+    <div class="member-p-red">
+        <p>대구 BNI 이상민 그로스디렉터 운영챕터의 멤버들을 만나보세요.</p>
+    </div>
+    <h2 style="text-transform: none;">Our Member</h2>
+    <div class="member-p">
+        <p>각 분야를 대표하는 멤버들을 소개합니다.</p>
+    </div>
+
+    <!-- 버튼 추가 -->
+    <div class="button-container">
+        <button onclick="showMembers('group1')">어메이징챕터</button>
+        <button onclick="showMembers('group2')">원더풀챕터</button>
+    </div>
+
+    <div class="member-card-container">
+        <!-- 그룹 1 -->
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member1.png" alt="Member 1">
+                <div class="info">
+                    <p>이름: 홍길동</p>
+                    <p>회사명: ABC Corp</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>이상민 대표</h3>
+                <p>다미 중고차</p>
+                <p><a href="#" target="_blank">다미 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member2.png" alt="Member 2">
+                <div class="info">
+                    <p>이름: 김철수</p>
+                    <p>회사명: XYZ Ltd</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>김철수 대표</h3>
+                <p>XYZ 중고차</p>
+                <p><a href="#" target="_blank">XYZ 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member3.png" alt="Member 3">
+                <div class="info">
+                    <p>이름: 이영희</p>
+                    <p>회사명: DEF Inc</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>이영희 대표</h3>
+                <p>DEF 중고차</p>
+                <p><a href="#" target="_blank">DEF 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member4.png" alt="Member 4">
+                <div class="info">
+                    <p>이름: 박민수</p>
+                    <p>회사명: GHI Co</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>박민수 대표</h3>
+                <p>GHI 중고차</p>
+                <p><a href="#" target="_blank">GHI 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member5.png" alt="Member 5">
+                <div class="info">
+                    <p>이름: 최유리</p>
+                    <p>회사명: JKL Inc</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>최유리 대표</h3>
+                <p>JKL 중고차</p>
+                <p><a href="#" target="_blank">JKL 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member6.png" alt="Member 6">
+                <div class="info">
+                    <p>이름: 정민호</p>
+                    <p>회사명: MNO Ltd</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>정민호 대표</h3>
+                <p>MNO 중고차</p>
+                <p><a href="#" target="_blank">MNO 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member7.png" alt="Member 7">
+                <div class="info">
+                    <p>이름: 김영수</p>
+                    <p>회사명: PQR Co</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>김영수 대표</h3>
+                <p>PQR 중고차</p>
+                <p><a href="#" target="_blank">PQR 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group1">
+            <div class="member-card">
+                <img src="images/member8.png" alt="Member 8">
+                <div class="info">
+                    <p>이름: 송지민</p>
+                    <p>회사명: STU Inc</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>송지민 대표</h3>
+                <p>STU 중고차</p>
+                <p><a href="#" target="_blank">STU 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <!-- 그룹 2 -->
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member9.png" alt="Member 9">
+                <div class="info">
+                    <p>이름: 이재훈</p>
+                    <p>회사명: VWX Ltd</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>이재훈 대표</h3>
+                <p>VWX 중고차</p>
+                <p><a href="#" target="_blank">VWX 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member10.png" alt="Member 10">
+                <div class="info">
+                    <p>이름: 한지민</p>
+                    <p>회사명: YZA Co</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>한지민 대표</h3>
+                <p>YZA 중고차</p>
+                <p><a href="#" target="_blank">YZA 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member11.png" alt="Member 11">
+                <div class="info">
+                    <p>이름: 박서준</p>
+                    <p>회사명: BCD Inc</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>박서준 대표</h3>
+                <p>BCD 중고차</p>
+                <p><a href="#" target="_blank">BCD 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member12.png" alt="Member 12">
+                <div class="info">
+                    <p>이름: 최강희</p>
+                    <p>회사명: EFG Ltd</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>최강희 대표</h3>
+                <p>EFG 중고차</p>
+                <p><a href="#" target="_blank">EFG 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member13.png" alt="Member 13">
+                <div class="info">
+                    <p>이름: 김지혜</p>
+                    <p>회사명: HIJ Co</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>김지혜 대표</h3>
+                <p>HIJ 중고차</p>
+                <p><a href="#" target="_blank">HIJ 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member14.png" alt="Member 14">
+                <div class="info">
+                    <p>이름: 박지수</p>
+                    <p>회사명: KLM Inc</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>박지수 대표</h3>
+                <p>KLM 중고차</p>
+                <p><a href="#" target="_blank">KLM 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member14.png" alt="Member 15">
+                <div class="info">
+                    <p>이름: 박지수</p>
+                    <p>회사명: KLM Inc</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>박지수 대표</h3>
+                <p>KLM 중고차</p>
+                <p><a href="#" target="_blank">KLM 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+
+        <div class="member-wrapper group2">
+            <div class="member-card">
+                <img src="images/member14.png" alt="Member 16">
+                <div class="info">
+                    <p>이름: 박지수</p>
+                    <p>회사명: KLM Inc</p>
+                </div>
+            </div>
+            <div class="member-description">
+                <h3>박지수 대표</h3>
+                <p>KLM 중고차</p>
+                <p><a href="#" target="_blank">KLM 홈페이지</a></p>
+                <p>딜러</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function showMembers(group) {
+        const allMembers = document.querySelectorAll('.member-wrapper');
+        allMembers.forEach(member => {
+            if (member.classList.contains(group)) {
+                member.style.display = 'block'; // 그룹에 해당하는 멤버는 보이게
+            } else {
+                member.style.display = 'none'; // 그룹에 해당하지 않는 멤버는 숨김
+            }
+        });
+    }
+
+    // 초기 상태: 그룹 1 멤버만 보이게
+    showMembers('group1');
+</script>
+  
+
+
+
+<!-- 지역 구성인원 섹션 -->
+<section id="group-section"  class="no-select">
+    <div class="group-p-red">
+        <p>BNI 앰버서더</p>
+    </div>
+    <h2>BNI D&A 구성인원</h2>
+    <div class="group-item">
+        <img src="images/support.png" alt="지원 이미지">
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- FAQ 섹션 -->
+<section id="faq-section"  class="no-select">
+    <div class="faq-p-red">
+        <p>자주 찾는 질문</p>
+    </div>
+    <h2 style="text-transform: none;">Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-p">
+            <p>자주 묻는 질문을 확인해주세요.</p>
+        </div>
+
+        <!-- FAQ 항목 -->
+        <div class="faq-item">
+            <img src="images/FAQ/faq1.png" alt="FAQ Image"> <!-- 하나의 이미지 사용 -->
+            <div class="question-answer">
+                <div class="question">
+                    <img src="images/FAQ/plus.png" alt="Plus Icon" class="icon"> <!-- "+" 아이콘 -->
+                    <h3>BNI가 무엇인가요?</h3>
+                </div>
+                <div class="answer">
+                    <p>Business Network International의 약자로 세계에서 가장 큰 국제 비즈</p>
+                    <p>니스 소개 조직으로서, 1985년 미국 LA에서 Ivan Misner 박사에 의하</p>
+                    <p>여 설립되었으며, BNI의 목적은 멤버들에게 비즈니스 관련 idea,</p>
+                    <p>contact point, 그리고 referral(비즈니스 소개)을 받을 수 있는 "기</p>
+                    <p>회"를 제공합니다.</p>
+                </div>
+
+                <div class="question">
+                    <img src="images/FAQ/plus.png" alt="Plus Icon" class="icon"> <!-- "+" 아이콘 -->
+                    <h3>누구나 BNI에 가입할 수 있나요?</h3>
+                </div>
+                <div class="answer">
+                    <p>1. 업력이나 경력 2년 이상, 기존 멤버와 업종이 겹치지 않아야 합니다.</p>
+                    <p>2. 윤리강령 및 멤버 규정을 잘 지킬 수 있어야 합니다.</p>
+                    <p>3. 투자업 및 다단계업은 가입을 받지 않습니다.</p>
+                </div>
+
+                <div class="question">
+                    <img src="images/FAQ/plus.png" alt="Plus Icon" class="icon"> <!-- "+" 아이콘 -->
+                    <h3>BNI 멤버가 갖는 구체적인 혜택은 무엇인가요?</h3>
+                </div>
+                <div class="answer">
+                    <p>1. 다양한 업종의 사업가들로 구성된 무보수 영업인력을 갖게 됩니다.</p>
+                    <p>2. 멤버들로부터 수십여 건 또는 수백여 건 이상의 소개를(커미션 없음) 받을 수 있습니다.</p>
+                    <p>3. 멤버들에게 자신의 상품과 서비스를 마음껏 홍보할 수 있습니다.</p>
+                    <p>4. 멤버들 간 전문적인 자문, 코칭 또는 컨설팅을 받을 수 있습니다.</p>
+                    <p>5. 비즈니스 인맥 관리 노하우와 회장/부회장/총무 등 리더십도 경험할 수 있습니다.</p>
+                    <p>6. 당신 지역에서 BNI 멤버들과 교류할 수 있도록 사업박람회 및 지역 컨퍼런스를 개최합니다.</p>
+                    <p>7. BNI 모바일앱과 BNI 커넥트로 전세계 70여 개국 멤버들과 관계를 구축할 수 있습니다.</p>
+                    <p>8. 국내 및 해외로 인맥 또는 사업 확장 시, 전세계 BNI 멤버들의 도움을 받을 수 있습니다.</p>
+                </div>
+
+                <div class="question">
+                    <img src="images/FAQ/plus.png" alt="Plus Icon" class="icon"> <!-- "+" 아이콘 -->
+                    <h3>BNI 철학이 뭔가요?</h3>
+                </div>
+                <div class="answer">
+                    <p>BNI의 철학은 'Givers Gain', "주는 사람이 얻는다" 입니다. 멤버들은 자신을 위해 일하는 수십 명의 영업사원을 얻게 되고 멤버들은 당신의 명함을 지니고 다니다가, 당신의 제품이나 서비스를 이용할 만한 고객을 만나면 당신의 명함을 그들에게 건넬 것입니다.</p>
+                </div>
+
+                <div class="question">
+                    <img src="images/FAQ/plus.png" alt="Plus Icon" class="icon"> <!-- "+" 아이콘 -->
+                    <h3>BNI 회비가 있나요?</h3>
+                </div>
+                <div class="answer">
+                    <p>BNI 가입비는 등록비와 연회비로 구성됩니다. 등록비는 최초 가입 시에만 해당되며, 이듬해 갱신 회원의 경우에는 연회비만 해당됩니다.</p>
+                    <p>BNI는 글로벌 규정으로, 웹상에서 회비 체계를 공개적으로 표시하지 못하도록 규정되어 있습니다.</p>
+                    <p>전화 또는 이메일로 문의하시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    
+
+
+
+
+<!-- Gallery 섹션 -->
+<section id="projects-section"  class="no-select">
+    <div class="gallery-p-red">
+        <p>포토갤러리</p>
+    </div>
+    <h2 style="text-transform: none;">Gallery</h2>
+    <div class="gallery-p">
+        <p>BIN 협업 비즈니스 포토갤러리</p>
+    </div>
+    <div class="gallery-grid">
+        <div>
+            <img src="images/GALLERY/main.jpg" alt="Gallery Image 1" onclick="openPopup(0, this)">
+        </div>
+        <div>
+            <img src="images/GALLERY/main.jpg" alt="Gallery Image 2" onclick="openPopup(1, this)">
+        </div>
+        <div>
+            <img src="images/GALLERY/main2.png" alt="Gallery Image 3" onclick="openPopup(2, this)">
+        </div>
+        <div>
+            <img src="images/GALLERY/main3.png" alt="Gallery Image 4" onclick="openPopup(3, this)">
+        </div>
+        <div>
+            <img src="images/GALLERY/main4.png" alt="Gallery Image 5" onclick="openPopup(4, this)">
+        </div>
+        <div>
+            <img src="images/GALLERY/main5.png" alt="Gallery Image 6" onclick="openPopup(5, this)">
+        </div>
+        <div>
+            <img src="images/GALLERY/main.jpg" alt="Gallery Image 7" onclick="openPopup(6, this)">
+        </div>
+        <div>
+            <img src="images/GALLERY/main.jpg" alt="Gallery Image 8" onclick="openPopup(7, this)">
+        </div>
+        <!-- 추가 이미지 -->
+    </div>
+</section>
+
+<!-- Image Popup -->
+<div id="image-popup" class="popup no-select">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popup-image">
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+
+
+
+
+    <!-- 참석 메일보내기 섹션 -->
+    <section id="contact-section" class="no-select">
+        <div class="contact-p-red">
+            <p>참석문의</p>
+        </div>
+        <h2 style="text-transform: none;">Contact Us</h2>
+        <div class="contact-p">
+            <p>각 전문분야 사업가들과 긍정적이고 체계적인 협업시스템을 통해 다양한 인맥을 공유하고 서로의 비즈니스를</p>
+            <p>소개하는 협업 비즈니스 플랫폼으로 당신의 비즈니스를 소개할 수 있는 협업 비즈니스 모임에 귀하를 초대합니다.</p>
+        </div>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="이름" required>
+            <input type="email" name="email" placeholder="이메일" required>
+            <input type="tel" name="phone" placeholder="핸드폰 번호" required>
+            <textarea name="memo" placeholder="경력 또는 업력 2년이상으로 명함과 사업자등록증 사본을 ~~@~~~.com 또는 010-1111-1111 로 보내주시면 참석 여부를 알려드립니다."></textarea>
+            <button type="submit">참석 신청</button>
+        </form>
+    </section>
+
+
+
+<!-- 페이지 하단 -->
+<footer class="site-footer no-select">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-4 mb-4">
+                <h3 class="footer-heading">About Us</h3>
+                <p>BNI는 기업 경영자ㆍ전문가들이 비즈니스 소개를 주고 받으며 자신의 사업을 키우는 것을 지원하는 목적으로 운영되는 39년의 검증된 세계 최대의 비즈니스 협업 플랫폼입니다.</p>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h3 class="footer-heading">Information</h3>
+                <p>목요일 AM 6:30<br>장소 : 뉴욕뉴욕<br>(대구 수성구 용학로 116-9)<br>준비사항 : 비즈니스 복장 / 명함 50장</p>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h3 class="footer-heading">Follow Us</h3>
+                <p>
+                    <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/car_dami/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://map.naver.com/p/entry/place/1098966907?placePath=%2Fhome&c=15.61,0,0,0,dh" target="_blank" class="p-2 pl-0 text-white">
+                        <i class="fa-solid fa-location-dot"></i></a> <!-- 네이버 지도 링크 추가 -->
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center mt-4">
+            <div class="col-md-12">
+                <p>
+                    <a href="mailto:dltkdals0729@naver.com" class="contact-link"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>dltkdals0729@naver.com</a> |
+                    <a href="tel:010-8490-8979" class="contact-link"><i class="fa-solid fa-phone" style="color: #ffffff;"></i>010-8490-8979</a>
+                </p>
+                <p>
+                    &copy; 2024 <strong>BNI ~~</strong> . All Rights Reserved. <br>
+                    Designed &amp; Developed by <a href="#" target="_blank" class="contact-link">필요 시 추가</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        window.onscroll = function() {
+          var navbar = document.querySelector('.site-navbar');
+          if (window.pageYOffset > 100) {  // 스크롤이 100px 이상 내려가면
+            navbar.classList.add('scrolled');  // 'scrolled' 클래스 추가
+          } else {
+            navbar.classList.remove('scrolled');  // 'scrolled' 클래스 제거
+          }
+        };
+    </script>
+</body>
+</html>
