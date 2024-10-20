@@ -1524,7 +1524,7 @@ h2 {
         max-width: 50px; /* 원하는 최대 너비 설정 */
     }
 
-    .contact-link {
+    .link-0 {
         display: none; /* 텍스트 숨기기 */
     }
 }
