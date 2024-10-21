@@ -2,5 +2,5 @@
 
 
 
-https://bnimin.com
+bnimin.com
 최종본 호스팅완료
